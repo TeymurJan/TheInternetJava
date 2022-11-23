@@ -15,7 +15,6 @@ public class ABTestPage extends BasePage {
     public ABTestPage(WebDriver driver) {
         super(driver);
         driver.get(PAGE_URL);
-        PageFactory.initElements(driver, this);
     }
 
     public String getHeaderABTestText() {

@@ -16,7 +16,6 @@ public class BrokenImagesPage extends BasePage {
         super(driver);
         this.driver = driver;
         driver.get(PAGE_URL);
-        PageFactory.initElements(driver, this);
     }
 
     public String getFirstImageAddress() {

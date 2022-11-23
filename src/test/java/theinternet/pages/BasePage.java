@@ -3,7 +3,7 @@ package theinternet.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -22,6 +22,10 @@ public class BasePage {
 
     protected void clickOn(By element) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(element)).click();
+    }
+    protected void rightClickOn(By element) {
+        Actions actions = new Actions(driver);
+        actions.contextClick(wait.until(ExpectedConditions.visibilityOfElementLocated(element))).perform();
     }
 
     protected void sendKeys(By element, String str) {
@@ -48,5 +52,9 @@ public class BasePage {
 
     protected WebElement getElement(By element) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(element));
+    }
+
+    protected boolean isChecked(By element) {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(element)).isSelected();
     }
 }

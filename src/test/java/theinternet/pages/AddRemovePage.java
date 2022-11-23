@@ -2,7 +2,6 @@ package theinternet.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class AddRemovePage extends BasePage {
@@ -17,7 +16,6 @@ public class AddRemovePage extends BasePage {
         super(driver);
         this.driver = driver;
         driver.get(PAGE_URL);
-        PageFactory.initElements(driver, this);
     }
 
     public void clickAdd() {
