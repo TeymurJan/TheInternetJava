@@ -45,4 +45,8 @@ public class BasePage {
         boolean exists = driver.findElements(element).size() != 0;
         return exists;
     }
+
+    protected WebElement getElement(By element) {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(element));
+    }
 }
