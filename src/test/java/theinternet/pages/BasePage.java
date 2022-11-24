@@ -57,4 +57,13 @@ public class BasePage {
     protected boolean isChecked(By element) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(element)).isSelected();
     }
+
+//    protected void dragAndDrop(By fromEl, By toEl) {
+//        Actions actions = new Actions(driver);
+////        actions.clickAndHold(wait.until(ExpectedConditions.visibilityOfElementLocated(fromEl)))
+////                .moveToElement(wait.until(ExpectedConditions.visibilityOfElementLocated(toEl)))
+////                .release(wait.until(ExpectedConditions.visibilityOfElementLocated(toEl))).build().perform();
+//        actions.clickAndHold(driver.findElement(fromEl)).moveToElement(driver.findElement(toEl)).release(driver.findElement(toEl)).release().build();
+//    }
+//Doesn't work, tried both dragAndDrop and clickAndHold functions
 }
