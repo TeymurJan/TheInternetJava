@@ -3,15 +3,12 @@ package theinternet.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import javax.print.DocFlavor;
-
 public class DropDownPage extends BasePage {
     WebDriver driver;
 
-    private static String PAGE_URL = "https://the-internet.herokuapp.com/drag_and_drop";
+    private static String PAGE_URL = "https://the-internet.herokuapp.com/dropdown";
 
-    private static By dropdownA = By.id("column-a");
-    private static By dropdownB = By.id("column-b");
+    private static By dropdownMenu = By.id("dropdown");
 
     public DropDownPage(WebDriver driver) {
         super(driver);
@@ -19,15 +16,12 @@ public class DropDownPage extends BasePage {
         driver.get(PAGE_URL);
     }
 
-    public void dragAndDropDivs() {
-        dragAndDrop(dropdownA, dropdownB);
+    public void selectOption(String opt) {
+        selectOptionByName(dropdownMenu, opt);
     }
 
-    public String getTextDropA() {
-        return getElementText(dropdownA);
+    public String getDropDownText() {
+        return getTextFromDropdown(dropdownMenu);
     }
 
-    public String getTextDropB() {
-        return getElementText(dropdownB);
-    }
 }
