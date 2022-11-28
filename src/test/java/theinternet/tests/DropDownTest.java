@@ -11,16 +11,7 @@ import theinternet.pages.DropDownPage;
 
 import java.util.concurrent.TimeUnit;
 
-public class DropDownTest {
-    WebDriver driver;
-
-    @Before
-    public void setup() {
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        BasicConfigurator.configure();
-    }
-
+public class DropDownTest extends BaseTest {
     @Test
     public void checkDropDown() {
         DropDownPage dropDownPage = new DropDownPage(driver);
@@ -31,10 +22,5 @@ public class DropDownTest {
 
         dropDownPage.selectOption("Option 2");
         Assert.assertTrue(dropDownPage.getDropDownText().equals("Option 2"));
-    }
-
-    @After
-    public void close() {
-        driver.quit();
     }
 }

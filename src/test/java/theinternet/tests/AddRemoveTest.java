@@ -12,16 +12,11 @@ import java.util.Random;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-public class AddRemoveTest {
-    WebDriver driver;
+public class AddRemoveTest extends BaseTest {
     AddRemovePage addRemovePage;
 
     @Before
     public void setup() {
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        BasicConfigurator.configure();
-
         addRemovePage = new AddRemovePage(driver);
     }
 
@@ -40,10 +35,5 @@ public class AddRemoveTest {
         for(int i = 0; i < counter; i++)
             addRemovePage.clickRemove();
         Assert.assertFalse(addRemovePage.removeIsNotVisible());
-    }
-
-    @After
-    public void close() {
-        driver.quit();
     }
 }
