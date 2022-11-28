@@ -4,15 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class DropDownPage extends BasePage {
-    WebDriver driver;
-
     private static String PAGE_URL = "https://the-internet.herokuapp.com/dropdown";
 
     private static By dropdownMenu = By.id("dropdown");
 
     public DropDownPage(WebDriver driver) {
         super(driver);
-        this.driver = driver;
         driver.get(PAGE_URL);
     }
 

@@ -9,8 +9,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ChallengingDomPage extends BasePage {
-    WebDriver driver;
-
     private static String PAGE_URL = "https://the-internet.herokuapp.com/challenging_dom";
 
     private static By buttonBlue = By.cssSelector("a.button:first-child");
@@ -19,7 +17,6 @@ public class ChallengingDomPage extends BasePage {
 
     public ChallengingDomPage(WebDriver driver) {
         super(driver);
-        this.driver = driver;
         driver.get(PAGE_URL);
     }
 

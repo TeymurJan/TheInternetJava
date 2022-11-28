@@ -4,8 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class CheckBoxesPage extends BasePage {
-    WebDriver driver;
-
     private static String PAGE_URL = "https://the-internet.herokuapp.com/checkboxes";
 
     private static By checkBoxFirst = By.cssSelector("input[type=\"checkbox\"]:checked");
@@ -13,7 +11,6 @@ public class CheckBoxesPage extends BasePage {
 
     public CheckBoxesPage(WebDriver driver) {
         super(driver);
-        this.driver = driver;
         driver.get(PAGE_URL);
     }
 

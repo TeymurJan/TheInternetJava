@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class BrokenImagesPage extends BasePage {
-    WebDriver driver;
-
     private static String PAGE_URL = "https://the-internet.herokuapp.com/broken_images";
 
     private static By firstImage = By.cssSelector("img[src=\"asdf.jpg\"]");
@@ -14,7 +12,6 @@ public class BrokenImagesPage extends BasePage {
 
     public BrokenImagesPage(WebDriver driver) {
         super(driver);
-        this.driver = driver;
         driver.get(PAGE_URL);
     }
 

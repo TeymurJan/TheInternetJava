@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class ABTestPage extends BasePage {
-    private WebDriver driver;
-
     private static String PAGE_URL = "https://the-internet.herokuapp.com/abtest";
 
     private static By headerABTest = By.xpath("//div//h3");

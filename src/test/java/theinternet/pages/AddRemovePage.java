@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class AddRemovePage extends BasePage {
-    private WebDriver driver;
-
     private static String PAGE_URL = "https://the-internet.herokuapp.com/add_remove_elements/";
 
     private static By buttonAdd = By.xpath("//button[not(@class='added-manually')]");
@@ -14,7 +12,6 @@ public class AddRemovePage extends BasePage {
 
     public AddRemovePage(WebDriver driver) {
         super(driver);
-        this.driver = driver;
         driver.get(PAGE_URL);
     }
 
